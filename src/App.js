@@ -1,35 +1,59 @@
 import { Component } from 'react'
 import Container from './components/container/Container'
+import { FeedbackOptions } from './components/FeedbackOptions/FeedbackOptions'
 
 class App extends Component {
-  state = {
-    good: 0,
-    neutral: 0,
-    bad: 0,
-  }
+  // static defaultProps = {
+  //   initialValue: 0,
+  // }
 
-  incrementValue = () => {
-    this.setState((el) => ({
-      good: el.good + 1,
-    }))
-    console.log(this.good)
-  }
+  // state = {
+  //   good: this.props.initialValue,
+  //   neutral: this.props.initialValue,
+  //   bad: this.props.initialValue,
+  //   total: this.props.initialValue,
+  // }
+
+  // incrementGood = () => {
+  //   this.setState(({ good }) => ({
+  //     good: good + 1,
+  //   }))
+  // }
+
+  // incrementNeutral = () => {
+  //   this.setState(({ neutral }) => ({
+  //     neutral: neutral + 1,
+  //   }))
+  // }
+
+  // incrementBad = () => {
+  //   this.setState(({ bad }) => ({
+  //     bad: bad + 1,
+  //   }))
+  // }
 
   render() {
-    // const { good, neutral, bad } = this.state
+    // const { good, neutral, bad, total } = this.state
 
     return (
       <Container>
-        <h2>Please leave feedback</h2>
-        <button type="button" onClick={this.incrementValue}>
+        <FeedbackOptions />
+        {/* <h2>Please leave feedback</h2>
+        <button type="button" onClick={this.incrementGood}>
           Good
         </button>
-        <button type="button">Neutral</button>
-        <button type="button">Bad</button>
-        <h3>Statistics</h3>
-        <p>Good:</p>
-        <p>Neutral:</p>
-        <p>Bad:</p>
+        <button type="button" onClick={this.incrementNeutral}>
+          Neutral
+        </button>
+        <button type="button" onClick={this.incrementBad}>
+          Bad
+        </button> */}
+
+        {/* <h3>Statistics</h3>
+        <p>Good: {good}</p>
+        <p>Neutral: {neutral}</p>
+        <p>Bad: {bad} </p>
+        <p>Total: {total} </p> */}
       </Container>
     )
   }
