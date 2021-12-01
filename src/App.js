@@ -23,6 +23,13 @@ class App extends Component {
     this.setState({ visible: true })
   }
 
+  // increment = (options) => {
+
+  //   this.countTotalFeedback()
+  //   this.countPositiveFeedbackPercentage()
+  //   this.show()
+  // }
+
   incrementGood = () => {
     this.setState(({ good }) => ({
       good: good + 1,
@@ -64,10 +71,12 @@ class App extends Component {
 
   render() {
     const { good, neutral, bad, total, percent, visible } = this.state
+
     return (
       <Container>
         <Section title="Please leave feedback">
           <FeedbackOptions
+            // options={totalValue}
             onIncrementGood={this.incrementGood}
             onIncrementNeutral={this.incrementNeutral}
             onIncrementBad={this.incrementBad}
