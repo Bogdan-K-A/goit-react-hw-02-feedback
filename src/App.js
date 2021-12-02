@@ -13,12 +13,8 @@ class App extends Component {
   }
 
   countTotalFeedback = () => {
-    const values = Object.values(this.state)
-    let total = 0
-    for (const value of values) {
-      total += value
-    }
-    return total
+    const { good, neutral, bad } = this.state
+    return good + neutral + bad
   }
 
   countPositiveFeedbackPercentage = () => {
