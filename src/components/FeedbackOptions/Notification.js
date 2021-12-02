@@ -1,1 +1,3 @@
-export const Notification = ({ message }) => <>{<p>{message}</p>}</>
+export const Notification = ({ message = '' }) => (
+  <>{message && <h4>{message}</h4>}</>
+)

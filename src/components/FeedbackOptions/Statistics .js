@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 export const Statistics = ({ good, neutral, bad, total, percent }) => {
   return (
@@ -11,4 +12,10 @@ export const Statistics = ({ good, neutral, bad, total, percent }) => {
       <p>Positive feedbeck: {percent} %</p>
     </>
   )
+}
+
+Statistics.prototype = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  Bad: PropTypes.number.isRequired,
 }
