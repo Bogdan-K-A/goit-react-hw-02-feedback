@@ -18,4 +18,6 @@ Statistics.prototype = {
   good: PropTypes.number.isRequired,
   neutral: PropTypes.number.isRequired,
   Bad: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
+  percent: PropTypes.number.isRequired,
 }
